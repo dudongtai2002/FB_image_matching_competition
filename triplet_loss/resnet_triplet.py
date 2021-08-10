@@ -15,7 +15,7 @@ class Resnet18Triplet(nn.Module):
 
     def __init__(self, embedding_dimension=512, pretrained=False):
         super(Resnet18Triplet, self).__init__()
-        self.model = models.resnet18(pretrained=True)
+        self.model = models.resnet18(pretrained=pretrained)
 
         # Output embedding
         input_features_fc_layer = self.model.fc.in_features
@@ -42,7 +42,7 @@ class Resnet34Triplet(nn.Module):
 
     def __init__(self, embedding_dimension=512, pretrained=False):
         super(Resnet34Triplet, self).__init__()
-        self.model = models.resnet34(pretrained=True)
+        self.model = models.resnet34(pretrained=pretrained)
 
         # Output embedding
         input_features_fc_layer = self.model.fc.in_features
@@ -69,7 +69,7 @@ class Resnet50Triplet(nn.Module):
 
     def __init__(self, embedding_dimension=512, pretrained=False):
         super(Resnet50Triplet, self).__init__()
-        self.model = models.resnet50(pretrained=True)
+        self.model = models.resnet50(pretrained=pretrained)
 
         # Output embedding
         input_features_fc_layer = self.model.fc.in_features
@@ -96,7 +96,7 @@ class Resnet101Triplet(nn.Module):
 
     def __init__(self, embedding_dimension=512, pretrained=False):
         super(Resnet101Triplet, self).__init__()
-        self.model = models.resnet101(pretrained=True)
+        self.model = models.resnet101(pretrained=pretrained)
 
         # Output embedding
         input_features_fc_layer = self.model.fc.in_features
@@ -123,7 +123,7 @@ class Resnet152Triplet(nn.Module):
 
     def __init__(self, embedding_dimension=512, pretrained=False):
         super(Resnet152Triplet, self).__init__()
-        self.model = models.resnet152(pretrained=True)
+        self.model = models.resnet152(pretrained=pretrained)
 
         # Output embedding
         input_features_fc_layer = self.model.fc.in_features
